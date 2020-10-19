@@ -1,19 +1,16 @@
 <template>
   <div id="app">
-    <ImagePrepend class="prepend"></ImagePrepend>
     <ImageUpload class="upload"></ImageUpload>
   </div>
 </template>
 
 <script>
 import ImageUpload from './components/upload/upload'
-import ImagePrepend from './components/imagePrepend/image'
 
 export default {
   name: 'App',
   components: {
     ImageUpload,
-    ImagePrepend
   }
 }
 </script>
@@ -28,7 +25,7 @@ export default {
 }
 .upload {
   display: inline-block;
-  width: 500px;
+  width: 320px;
   margin: 0 auto;
 }
 .prepend {
