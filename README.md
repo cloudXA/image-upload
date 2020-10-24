@@ -29,7 +29,7 @@
 
 ## Overview
 
-![screenshot](src\image\upload.jpg)
+![screenshot](https://github.com/cloudXA/image-upload/blob/main/src/image/upload.jpg)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
