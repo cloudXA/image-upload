@@ -54,10 +54,11 @@ export default {
       
     },
 
+
+    // 完成拖拽上传方式 
     handleDrop(event) {
       event.preventDefault();
 
-      console.log(event.dataTransfer.files, 'data files')
 
       let formdata = new FormData();
 
@@ -88,30 +89,29 @@ export default {
 
     },
 
+    // 完成HTML5 files上传方式 
     // 处理上传文件
     handleSubmit() {
       let formdata = new FormData();
 
       formdata.append('name', 'oppo');
       formdata.append('price', 4999);
-      console.log(document.getElementById('chooseImage').files, 'files')
-      formdata.append(' ', document.getElementById('chooseImage').files[0])
-
-      // console.log(formdata.get('name'), 'formdata')
+      formdata.append('img', document.getElementById('chooseImage').files[0])
 
 
       this.$ajax({
-        url: '/products',
-        method: 'post',
-        data: formdata,
-        headers: {'Content-Type': 'multipart/form-data' }
-      }).then((result) => {
-        //TODO: 完成成功提示弹窗模块
-        console.log(result, 'result')
-      }).catch((err) => {
-        // TODO: 完成失败弹窗提示模块
-        console.log(err, 'err')
-      })
+          url: '/products',
+          method: 'post',
+          data: formdata,
+          headers: {'Content-Type': 'multipart/form-data' }
+        })
+        .then((result) => {
+          this.img = result.data.createdProduct.productImage
+
+        })
+        .catch((err) => {
+          console.log(err, 'err')
+        })
 
 
     }
