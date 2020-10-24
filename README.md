@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://8.129.106.56">
+    <a href="http://8.129.106.56">
       Demo
     </a>
   </h3>
