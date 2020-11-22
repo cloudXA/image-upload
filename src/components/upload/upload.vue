@@ -1,6 +1,7 @@
 <template>
 
   <div class="container">
+    
     <main class="items" 
       id="flag"  
       @dragenter="handleDragenter"
@@ -36,6 +37,7 @@
 
 <script>
 export default {
+  name: 'Upload',   // 用于将图片上传到服务器中
   data() {
     return {
       img: require('../../image/image.svg'),

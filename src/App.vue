@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <ImageUpload class="upload"></ImageUpload>
+    <!-- <ImageUpload class="upload"></ImageUpload> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ImageUpload from './components/upload/upload'
+// import ImageUpload from './components/upload/upload'
 
 export default {
   name: 'App',
   components: {
-    ImageUpload,
+    // ImageUpload,
   }
 }
 </script>
